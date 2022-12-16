@@ -2,7 +2,6 @@
 
 
         import com.codeborne.selenide.Condition;
-        import com.codeborne.selenide.SelenideElement;
         import com.codeborne.selenide.logevents.SelenideLogger;
         import io.qameta.allure.selenide.AllureSelenide;
         import org.junit.jupiter.api.Test;
@@ -23,10 +22,10 @@
         open("https://github.com/");
 
         searchInput.click();
-        searchInput.sendKeys("Malinatse1/Hw_9_Allure");
+        searchInput.sendKeys("Malinatse1/Hw-9_Allure");
         searchInput.submit();
 
-        $(linkText("Malinatse1/Hw_9_Allure")).click();
+        $(linkText("Malinatse1/Hw-9_Allure")).click();
         $("#issues-tab").click();
         $(withText("#1")).should(Condition.exist);
 
